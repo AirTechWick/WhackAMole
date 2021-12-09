@@ -5,16 +5,17 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 
+// HolePane Object that holds 3 different image views in it and has text
 public class HolePane extends StackPane {
     private static final Image emptyImage = new Image("file:src/main/java/com/example/whackamole/empty.png");
     private static final Image outImage = new Image("file:src/main/java/com/example/whackamole/out.png");
-    private static final Image inImage =  new Image("file:src/main/java/com/example/whackamole/in.png");
+    private static final Image inImage = new Image("file:src/main/java/com/example/whackamole/in.png");
 
     private ImageView imageView;
 
     private Text text;
 
-    HolePane(){
+    HolePane() {
         super();
         imageView = new ImageView(emptyImage);
         text = new Text();
@@ -33,22 +34,20 @@ public class HolePane extends StackPane {
         text.setText("");
     }
 
-    public void popOut(){
+    public void popOut() {
         imageView.setImage(outImage);
     }
 
-    public void popIn(){
+    public void popIn() {
         imageView.setImage(inImage);
     }
 
-    public boolean whack(){
-        if (imageView.getImage() == outImage){
+    public boolean whack() {
+        if (imageView.getImage() == outImage) {
             text.setText("Ouch!!");
             popIn();
             return true;
-        }
-
-        else
+        } else
             return false;
     }
 
