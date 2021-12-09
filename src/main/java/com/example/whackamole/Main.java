@@ -1,5 +1,4 @@
 // Project: Whack A Mole
-//
 // Author: Erik Rodriguez
 //
 package com.example.whackamole;
